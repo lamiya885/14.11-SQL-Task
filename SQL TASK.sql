@@ -111,5 +111,5 @@ as
 delete from Authors
  where Name=@name
 
- exec usp_AuthorDelete @name='yaya'
+ exec usp_AuthorDelete @name='Lamiya'
 
