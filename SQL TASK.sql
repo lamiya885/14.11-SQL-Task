@@ -76,12 +76,12 @@ select *from use_GetAuthorSearch
 
 create  procedure usp_AuthorsBooks @Search nvarchar(50)  
 as
-select B.ID,B.name,B.PageCount,CONCAT(A.name,A.SurName) as AuthorfullName  from Authors AS A
+select B.ID,B.name,B.PageCount,CONCAT(A.name,'.',A.SurName) as AuthorfullName  from Authors AS A
 join Books AS B
 on a.ID=b.AuthorID
 Where B.Name=@Search OR CONCAT(A.name,A.SurName)=@Search
 
-exec  usp_AuthorsBooks 'SolmazAmanova'
+exec  usp_AuthorsBooks 'Solmaz.Amanova'
 
 drop procedure usp_AuthorsBooks
 
